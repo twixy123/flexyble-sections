@@ -5,12 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/fontawesome/style/all.min.css" />
-  <link rel="stylesheet" href="assets/fonts/karla/stylesheet.css" />
-  <link rel="stylesheet" href="assets/bootstrap/style/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/swiper/style/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/style/style.css" />
-  <link rel="stylesheet" href="assets/style/media.css" />
+  
+  <link rel="stylesheet" href="assets/style/r_all_styles.css">
   <title>Home Public</title>
 </head>
 
@@ -18,25 +14,40 @@
   <header>
     <div class="container-fluid border-top-12-px header_container">
       <div class="row">
-        <div class="col-lg-8 col-xl-4">
+        <div class="col-9 col-lg-8 col-xl-4">
+
           <div class="row align-items-center">
-            <div class="col-xl-3 col-md-2 col-3 col-sm-3 logo">
+            <div class="col-xl-3 col-md-2 col-4 col-sm-3 logo">
               <img src="assets/img/main-logo-blue.png" alt="" class="w-100" />
             </div>
-            <div class="col-xl-4 col-md-3 col-4 col-sm-4 logo_actions_block">
-              <div class="logo_actions">
-                <p>Stroke Action Plan Europe <span>2018 – 2030</span></p>
+            <div class="col-4 col-md-3 col-xl-4 logo_actions_block">
+              <div>
+                <div class="logo_actions">
+                  <p>Stroke Action Plan Europe <span>2018 – 2030</span></p>
+                </div>
               </div>
+
             </div>
             <div class="col-xl-4 col-md-3 col-4 col-sm-4 counterparty_logo">
               <img src="assets/img/counterparty-logo.png" alt="" class="w-100" />
             </div>
           </div>
+
         </div>
-        <nav class="col-lg-12 col-xl-8 header__navigation">
-          <ul class="d-flex p-0 m-0 ml-auto justify-content-between">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Implementation</a></li>
+
+        <nav class="col-3 col-md-12 col-xl-8 header__navigation">
+          <ul class="burger_menu d-flex p-0 m-0 ml-auto justify-content-between">
+            <li class="active"><a href="root-home.html">Home</a></li>
+            <li>
+              Implementation 
+              <ul class="sub-menu">
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Domains</a></li>
+                <li><a href="#">About SAP-E</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+
+            </li>
             <li><a href="#">Resources</a></li>
             <li><a href="#">Domains</a></li>
             <li><a href="#">About SAP-E</a></li>
@@ -44,68 +55,79 @@
           </ul>
         </nav>
       </div>
-      <div class="header-swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="header__banner_slide">
-              <img src="assets/img/header-banner-2@2x.png" alt="" />
-            </div>
-            <div class="header__message_action_slide">
-              <div class="header__message_action_slide__content">
-                <h2 class="section_title_h2">Stroke Action Plan Europe</h2>
-                <h3 class="section_title_h3">Health care professionals and national societies</h3>
-                <p class="section_paragraph">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam. ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate velit esse cillum
-                </p>
-                <a href="#" class="section_link">Leaern More</a>
+
+      <div class="header_banner">
+        <div class="header-swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="header__banner_slide">
+                <img src="assets/img/header-banner.jpg" alt="" />
               </div>
+              <div class="header__message_action_slide">
+                <div class="header__message_action_slide__content">
+                  <h2 class="section_title_h2">Stroke Action Plan Europe</h2>
+                  <h3 class="section_title_h3">Health care professionals and national societies</h3>
+                  <p class="section_paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam. ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum
+                  </p>
+                  <a href="#" class="section_link">Leaern More</a>
+                </div>
+              </div>
+              <svg preserveAspectRatio="none" width="1278px" height="65px" viewBox="0 0 1278 65" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="header_baner_slider_wave">
+                <title>Page 1</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M1277.5,41.9003241 C1180.09058,0.869169118 1051.25724,-9.38861962 891,11.1269579 C650.614133,41.9003241 539.563331,64.5 286.161459,41.9003241 C117.226878,26.8338734 21.8689138,16.5760847 0.0875664535,11.1269579 C0.0875664535,46.708986 0.0875664535,64.5 0.0875664535,64.5 C0.0875664535,64.5 1277.5,64.5 1277.5,64.5 C1277.5,64.5 1277.5,56.9667747 1277.5,41.9003241 Z"
+                    id="Line" fill="#FFFFFF"></path>
+                  <path
+                    d="M757.247824,28.6006064 C804.15747,21.7206682 854.299045,14.9989696 907.67255,8.43551062 C956.561911,2.42347694 1023.84182,-0.450088694 1066.39781,0.869169118 C1182.72325,4.47531884 1235.06151,26.8947027 1235.06151,26.8947027 C1235.06151,26.8947027 1192.10972,26.6503462 1133.2064,32.6845846 C1083.82948,37.7429089 1023.39839,49.2528877 966.161504,49.2528877 C882.483759,49.2528877 812.845866,42.3687939 757.247824,28.6006064 Z"
+                    id="Line-2" fill="#EEEEEE"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="swiper-slide">
+              <div class="header__banner_slide">
+                <img src="assets/img/header-banner.jpg" alt="" />
+              </div>
+              <div class="header__message_action_slide">
+                <div class="header__message_action_slide__content">
+                  <h2 class="section_title_h2">Stroke Action Plan Europe</h2>
+                  <h3 class="section_title_h3">Health care professionals and national societies</h3>
+                  <p class="section_paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam. ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum
+                  </p>
+                  <a href="#" class="section_link">Leaern More</a>
+                </div>
+              </div>
+              <svg preserveAspectRatio="none" width="1278px" height="65px" viewBox="0 0 1278 65" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="header_baner_slider_wave">
+                <title>Page 1</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M1277.5,41.9003241 C1180.09058,0.869169118 1051.25724,-9.38861962 891,11.1269579 C650.614133,41.9003241 539.563331,64.5 286.161459,41.9003241 C117.226878,26.8338734 21.8689138,16.5760847 0.0875664535,11.1269579 C0.0875664535,46.708986 0.0875664535,64.5 0.0875664535,64.5 C0.0875664535,64.5 1277.5,64.5 1277.5,64.5 C1277.5,64.5 1277.5,56.9667747 1277.5,41.9003241 Z"
+                    id="Line" fill="#FFFFFF"></path>
+                  <path
+                    d="M757.247824,28.6006064 C804.15747,21.7206682 854.299045,14.9989696 907.67255,8.43551062 C956.561911,2.42347694 1023.84182,-0.450088694 1066.39781,0.869169118 C1182.72325,4.47531884 1235.06151,26.8947027 1235.06151,26.8947027 C1235.06151,26.8947027 1192.10972,26.6503462 1133.2064,32.6845846 C1083.82948,37.7429089 1023.39839,49.2528877 966.161504,49.2528877 C882.483759,49.2528877 812.845866,42.3687939 757.247824,28.6006064 Z"
+                    id="Line-2" fill="#EEEEEE"></path>
+                </g>
+              </svg>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="header__banner_slide">
-              <img src="assets/img/header-banner-2@2x.png" alt="" />
-            </div>
-            <div class="header__message_action_slide">
-              <div class="header__message_action_slide__content">
-                <h2 class="section_title_h2">Stroke Action Plan Europe</h2>
-                <h3 class="section_title_h3">Health care professionals and national societies</h3>
-                <p class="section_paragraph">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam. ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate velit esse cillum
-                </p>
-                <a href="#" class="section_link">Leaern More</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="header__banner_slide">
-              <img src="assets/img/header-banner-2@2x.png" alt="" />
-            </div>
-            <div class="header__message_action_slide">
-              <div class="header__message_action_slide__content">
-                <h2 class="section_title_h2">Stroke Action Plan Europe</h2>
-                <h3 class="section_title_h3">Health care professionals and national societies</h3>
-                <p class="section_paragraph">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam. ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate velit esse cillum
-                </p>
-                <a href="#" class="section_link">Leaern More</a>
-              </div>
-            </div>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
+
       <div class="header_options_block">
         <div class="options__links">
           <div class="options__link">
@@ -125,14 +147,14 @@
         </div>
         <div class="options__you_are_here">
           <p>You are here:</p>
-          <select name="options_here">
-            <option value="blue">
+          <select name="options_here" id="options_here">
+            <option value="file:///E:/ruslan/flexyble-content/home-hcp.html">
               Health care professionals and national societies1
             </option>
-            <option value="red">
+            <option value="file:///E:/ruslan/flexyble-content/home-public.html">
               General public and authorities
             </option>
-            <option value="yellow">
+            <option value="file:///E:/ruslan/flexyble-content/home-sso.html">
               Patient carers and stroke support organisations
             </option>
           </select>
@@ -416,9 +438,8 @@
   </footer>
 
 
-  <script src="assets/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/swiper/js/swiper-bundle.min.js"></script>
+  
+  <script src="assets/js/all-min.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
