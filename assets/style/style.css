@@ -1964,6 +1964,15 @@ svg.wave {
   padding-bottom: 60px;
 }
 
+.social_icon{
+  margin-left: 5px;
+}
+
+.title_section h2{
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
 .home_landing_blue .colored_section {
   background: var(--main-blue);
 }
