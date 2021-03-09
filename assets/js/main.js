@@ -141,7 +141,15 @@ function selectMapResBlock(value) {
     resBlocks.forEach((e) => (e.style = 'display: none;'));
     resBlocks.forEach((e) => {
       if (value == 0) e.style = 'display: block;';
-      else e.style = value == e.getAttribute('data-result') ? 'display: block;' : 'display: none;';
+      else if(value == e.getAttribute('data-result')) e.style = 'display: block;'
+      else {
+        e.style = 'display: none;'
+
+        if(e.getAttribute('data-result') == 'Error'){
+          e.querySelector('h3').innerHTML = value
+          e.style = 'display: block;'
+        }
+      }
     });
   }
 }
