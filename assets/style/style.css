@@ -2112,6 +2112,10 @@ svg.wave {
   padding: 25px;
 }
 
+.sel_path {
+  cursor: pointer;
+}
+
 .map_select_filter h2 {
   font-size: 36px;
   padding-bottom: 5px;

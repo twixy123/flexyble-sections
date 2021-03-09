@@ -120,27 +120,39 @@ if (document.querySelector('.gallery_logos-swiper-container')) {
 
 const mapSelect = document.getElementById('map_select');
 if (mapSelect) {
-  const paths = document.querySelectorAll('.sel_path')
+  const paths = document.querySelectorAll('.sel_path');
   mapSelect.addEventListener('change', function (e) {
-    paths.forEach(p => {
-      p.classList.remove('st1')
-      p.classList.add('st2')
-      if(this.value == p.getAttribute('data-id')){
-        p.classList.remove('st2')
-        p.classList.add('st1')
-      }
+    coloredPath(paths, this.value)
+    selectMapResBlock(this.value)
+  });
+
+  paths.forEach((p, i, arr) => {
+    p.addEventListener('click', function (e) {
+      coloredPath(arr, this.getAttribute('data-id'))
+      selectMapResBlock(this.getAttribute('data-id'))
+      mapSelect.value = this.getAttribute('data-id')
     });
+  });
+}
 
+function selectMapResBlock(value) {
+  const resBlocks = document.querySelectorAll('.map_res_block');
+  if (resBlocks) {
+    resBlocks.forEach((e) => (e.style = 'display: none;'));
+    resBlocks.forEach((e) => {
+      if (value == 0) e.style = 'display: block;';
+      else e.style = value == e.getAttribute('data-result') ? 'display: block;' : 'display: none;';
+    });
+  }
+}
 
-    const resBlocks = document.querySelectorAll('.map_res_block');
-    if (resBlocks) {
-      resBlocks.forEach((e) => (e.style = 'display: none;'));
-      resBlocks.forEach((e) => {
-        if (this.value == 0) e.style = 'display: block;';
-        else
-          e.style =
-            this.value == e.getAttribute('data-result') ? 'display: block;' : 'display: none;';
-      });
+function coloredPath(paths, value){
+  paths.forEach((p) => {
+    p.classList.remove('st1');
+    p.classList.add('st2');
+    if (value == p.getAttribute('data-id')) {
+      p.classList.remove('st2');
+      p.classList.add('st1');
     }
   });
 }
