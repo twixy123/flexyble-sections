@@ -120,41 +120,43 @@ if (document.querySelector('.gallery_logos-swiper-container')) {
 
 const mapSelect = document.getElementById('map_select');
 if (mapSelect) {
+  const resError = document.querySelector('.map_res_block_error');
+  resError.style = 'display: none';
   const paths = document.querySelectorAll('.sel_path');
   mapSelect.addEventListener('change', function (e) {
-    coloredPath(paths, this.value)
-    selectMapResBlock(this.value)
+    coloredPath(paths, this.value);
+    selectMapResBlock(this.value, resError);
   });
 
   paths.forEach((p, i, arr) => {
     p.addEventListener('click', function (e) {
-      coloredPath(arr, this.getAttribute('data-id'))
-      selectMapResBlock(this.getAttribute('data-id'))
-      mapSelect.value = this.getAttribute('data-id')
+      coloredPath(arr, this.getAttribute('data-id'));
+      selectMapResBlock(this.getAttribute('data-id'), resError);
+      mapSelect.value = this.getAttribute('data-id');
     });
   });
 }
 
-function selectMapResBlock(value) {
+function selectMapResBlock(value, error) {
   const resBlocks = document.querySelectorAll('.map_res_block');
   if (resBlocks) {
+    const checkError = [];
     resBlocks.forEach((e) => (e.style = 'display: none;'));
     resBlocks.forEach((e) => {
       if (value == 0) e.style = 'display: block;';
-      else if(value == e.getAttribute('data-result')) e.style = 'display: block;'
-      else {
-        e.style = 'display: none;'
-
-        if(e.getAttribute('data-result') == 'Error'){
-          e.querySelector('h3').innerHTML = value
-          e.style = 'display: block;'
-        }
+      else if (value == e.getAttribute('data-result')) {
+        e.style = 'display: block;';
+        checkError.push(e);
+      } else {
+        e.style = 'display: none;';
       }
     });
+    error.querySelector('h3').innerHTML = value
+    error.style = checkError.length > 0 || value == 0 ? 'display: none;' : 'display: block;';
   }
 }
 
-function coloredPath(paths, value){
+function coloredPath(paths, value) {
   paths.forEach((p) => {
     p.classList.remove('st1');
     p.classList.add('st2');
